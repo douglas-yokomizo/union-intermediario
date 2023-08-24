@@ -25,6 +25,87 @@ const List = () => {
             <td>30</td>
             <td><button>View profile</button></td>
           </tr>
+          <tr>
+            <td>gd54d5vdfbvtb</td>
+            <td>Jennie</td>
+            <td>Nichols</td>
+            <td>Miss</td>
+            <td>10/02/2023</td>
+            <td>30</td>
+            <td><button>View profile</button></td>
+          </tr>
+          <tr>
+            <td>gd54d5vdfbvtb</td>
+            <td>Jennie</td>
+            <td>Nichols</td>
+            <td>Miss</td>
+            <td>10/02/2023</td>
+            <td>30</td>
+            <td><button>View profile</button></td>
+          </tr>
+          <tr>
+            <td>gd54d5vdfbvtb</td>
+            <td>Jennie</td>
+            <td>Nichols</td>
+            <td>Miss</td>
+            <td>10/02/2023</td>
+            <td>30</td>
+            <td><button>View profile</button></td>
+          </tr>
+          <tr>
+            <td>gd54d5vdfbvtb</td>
+            <td>Jennie</td>
+            <td>Nichols</td>
+            <td>Miss</td>
+            <td>10/02/2023</td>
+            <td>30</td>
+            <td><button>View profile</button></td>
+          </tr>
+          <tr>
+            <td>gd54d5vdfbvtb</td>
+            <td>Jennie</td>
+            <td>Nichols</td>
+            <td>Miss</td>
+            <td>10/02/2023</td>
+            <td>30</td>
+            <td><button>View profile</button></td>
+          </tr>
+          <tr>
+            <td>gd54d5vdfbvtb</td>
+            <td>Jennie</td>
+            <td>Nichols</td>
+            <td>Miss</td>
+            <td>10/02/2023</td>
+            <td>30</td>
+            <td><button>View profile</button></td>
+          </tr>
+          <tr>
+            <td>gd54d5vdfbvtb</td>
+            <td>Jennie</td>
+            <td>Nichols</td>
+            <td>Miss</td>
+            <td>10/02/2023</td>
+            <td>30</td>
+            <td><button>View profile</button></td>
+          </tr>
+          <tr>
+            <td>gd54d5vdfbvtb</td>
+            <td>Jennie</td>
+            <td>Nichols</td>
+            <td>Miss</td>
+            <td>10/02/2023</td>
+            <td>30</td>
+            <td><button>View profile</button></td>
+          </tr>
+          <tr>
+            <td>gd54d5vdfbvtb</td>
+            <td>Jennie</td>
+            <td>Nichols</td>
+            <td>Miss</td>
+            <td>10/02/2023</td>
+            <td>30</td>
+            <td><button>View profile</button></td>
+          </tr>
         </tbody>
       </table>
     </div>

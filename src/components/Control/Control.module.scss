@@ -1,0 +1,25 @@
+@import '../../variables';
+
+.pages {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  right: 0;
+  left: 0;
+  bottom: 40px;
+  place-content: center;
+
+  a {
+    cursor: pointer;
+  }
+
+  a.noImage {
+    color: $pages-color;
+    border: 1px solid $secondary-color;
+    border-radius: 100%;
+    padding: 26px 32px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
