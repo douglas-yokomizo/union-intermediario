@@ -1,6 +1,7 @@
 import style from './List.module.scss'
 
 const List = () => {
+
   return (
     <div>
       <table>

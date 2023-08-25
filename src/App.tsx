@@ -1,17 +1,16 @@
-import Control from "./components/Control"
-import Header from "./components/Header"
-import List from "./components/List"
-import { useQuery } from "react-query"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
+import User from "./pages/User"
 
 function App() {
-  const { data } = useQuery()
 
   return (
-    <>
-      <Header />
-      <List />
-      <Control />
-    </>
+    <BrowserRouter basename="/">
+      <Routes>
+        <Route path="/" Component={Home} />
+        <Route path="/profile" Component={User} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
