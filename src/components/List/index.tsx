@@ -1,14 +1,33 @@
+import { useState, useEffect } from "react";
+import usersApi from '../../services/usersApi'
 import style from './List.module.scss'
 
 const List = () => {
 
+  const [listaNomes, setListaNomes] = useState()
+
+  useEffect(() => {
+    usersApi
+      .get("?results=100")
+      .then((response) => setListaNomes(response.data)
+      )
+      .catch((err) => {
+        console.error("ops! ocorreu um erro" + err);
+      });
+  }, []);
+
+  if (!listaNomes) return null;
+
+
   return (
-    <div>
+
+    <>
       <table>
+
         <thead className={style.header}>
           <tr>
             <th>ID</th>
-            <th>First Name</th>
+            <th> First Name</th>
             <th>Last Name</th>
             <th>Title</th>
             <th>Date</th>
@@ -16,100 +35,26 @@ const List = () => {
             <th>Actions</th>
           </tr>
         </thead>
+
         <tbody>
-          <tr>
-            <td>gd54d5vdfbvtb</td>
-            <td>Jennie</td>
-            <td>Nichols</td>
-            <td>Miss</td>
-            <td>10/02/2023</td>
-            <td>30</td>
-            <td><button>View profile</button></td>
-          </tr>
-          <tr>
-            <td>gd54d5vdfbvtb</td>
-            <td>Jennie</td>
-            <td>Nichols</td>
-            <td>Miss</td>
-            <td>10/02/2023</td>
-            <td>30</td>
-            <td><button>View profile</button></td>
-          </tr>
-          <tr>
-            <td>gd54d5vdfbvtb</td>
-            <td>Jennie</td>
-            <td>Nichols</td>
-            <td>Miss</td>
-            <td>10/02/2023</td>
-            <td>30</td>
-            <td><button>View profile</button></td>
-          </tr>
-          <tr>
-            <td>gd54d5vdfbvtb</td>
-            <td>Jennie</td>
-            <td>Nichols</td>
-            <td>Miss</td>
-            <td>10/02/2023</td>
-            <td>30</td>
-            <td><button>View profile</button></td>
-          </tr>
-          <tr>
-            <td>gd54d5vdfbvtb</td>
-            <td>Jennie</td>
-            <td>Nichols</td>
-            <td>Miss</td>
-            <td>10/02/2023</td>
-            <td>30</td>
-            <td><button>View profile</button></td>
-          </tr>
-          <tr>
-            <td>gd54d5vdfbvtb</td>
-            <td>Jennie</td>
-            <td>Nichols</td>
-            <td>Miss</td>
-            <td>10/02/2023</td>
-            <td>30</td>
-            <td><button>View profile</button></td>
-          </tr>
-          <tr>
-            <td>gd54d5vdfbvtb</td>
-            <td>Jennie</td>
-            <td>Nichols</td>
-            <td>Miss</td>
-            <td>10/02/2023</td>
-            <td>30</td>
-            <td><button>View profile</button></td>
-          </tr>
-          <tr>
-            <td>gd54d5vdfbvtb</td>
-            <td>Jennie</td>
-            <td>Nichols</td>
-            <td>Miss</td>
-            <td>10/02/2023</td>
-            <td>30</td>
-            <td><button>View profile</button></td>
-          </tr>
-          <tr>
-            <td>gd54d5vdfbvtb</td>
-            <td>Jennie</td>
-            <td>Nichols</td>
-            <td>Miss</td>
-            <td>10/02/2023</td>
-            <td>30</td>
-            <td><button>View profile</button></td>
-          </tr>
-          <tr>
-            <td>gd54d5vdfbvtb</td>
-            <td>Jennie</td>
-            <td>Nichols</td>
-            <td>Miss</td>
-            <td>10/02/2023</td>
-            <td>30</td>
-            <td><button>View profile</button></td>
-          </tr>
+          {listaNomes.results.map((item, index) => {
+            return (
+              <tr>
+                <td>{item.id.name}</td>
+                <td>{item.name.first}</td>
+                <td>{item.name.last}</td>
+                <td>{item.name.title}</td>
+                <td>{item.dob.date}</td>
+                <td>{item.dob.age}</td>
+                <td>View details</td>
+              </tr>
+            );
+
+          })}
+
         </tbody>
       </table>
-    </div>
+    </>
   )
 }
 
