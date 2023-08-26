@@ -1,10 +1,10 @@
 import axios from "axios";
 
 const usersApi = axios.create({
-  baseURL: 'https://randomuser.me'
+  baseURL: 'https://randomuser.me/api/'
 });
 
-export const getUsers = async () => {
+export const getUsersAll = async () => {
   const response = await usersApi.get('/api')
   return response.data
 }
