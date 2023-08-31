@@ -7,6 +7,7 @@ const List = () => {
   const [listaNomes, setListaNomes] = useState()
 
   useEffect(() => {
+    
     usersApi
       .get("?results=100")
       .then((response) => setListaNomes(response.data)
