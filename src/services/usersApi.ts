@@ -1,12 +1,18 @@
 import axios from "axios";
 
 const usersApi = axios.create({
-  baseURL: 'https://randomuser.me/api/'
-});
+  baseURL: "https://randomuser.me/api"
+})
 
-export const getUsersAll = async () => {
-  const response = await usersApi.get('/api')
+const getAllUsers = async () => {
+  const seed = 'abc';
+  const numberOfPages = 5;
+  const results = 100;
+  const nationality = 'br'
+  const response = await usersApi.get(`?results=${results}&?page=${numberOfPages}&?seed=${seed}&?nat=${nationality}`)
   return response.data
 }
 
-export default usersApi
+export const api = {
+  getAllUsers
+}
